@@ -10,11 +10,11 @@ import {COLOR, FONT_FAMILY} from '../../styles/consts/GlobalStyles';
 import ratio from '../../styles/consts/ratio';
 import WhiteBtn from '../../(components)/WhiteBtn';
 import BackIcon from '../../assets/images/icons/backIcon.svg';
-import NumberInput from '../../(components)/NumberInput';
+import OTPTextView from 'react-native-otp-textinput';
 
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
-const OTPScreen = ({navigation}) => {
+const OTPScreenChallenge = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <TouchableOpacity
@@ -23,24 +23,38 @@ const OTPScreen = ({navigation}) => {
         <BackIcon width={20} />
       </TouchableOpacity>
       <View style={styles.containerCenter}>
-        <Text style={styles.headingText}>Welcome to tradly</Text>
-        <Text style={styles.infoText}>
-          We have sent you an SMS with a code to enter number
-        </Text>
+        <Text style={styles.headingText}>Phone Verification</Text>
+        <Text style={styles.infoText}>Enter your OTP code here </Text>
         <View style={styles.inputsContainer}>
-          <NumberInput placeholder={'First Name'} />
+          <OTPTextView
+            inputCount={6}
+            offTintColor={COLOR.white}
+            textInputStyle={styles.inputsText}
+          />
         </View>
-        <Text style={styles.bottomText}>Or login with Social network</Text>
+        <TouchableOpacity onPress={() => navigation.goBack()}>
+          <Text style={styles.bottomText}>Didn’t you received any code? </Text>
+        </TouchableOpacity>
+        <Text
+          style={[
+            styles.bottomText,
+            {
+              marginBottom: pixelSizeVertical(57),
+              marginTop: pixelSizeVertical(16),
+            },
+          ]}>
+          Resent new code
+        </Text>
         <WhiteBtn
-          text={'Next'}
-          handleFunc={() => navigation.navigate('OTPCha')}
+          text={'Verify'}
+          handleFunc={() => navigation.navigate('Home')}
         />
       </View>
     </SafeAreaView>
   );
 };
 
-export default OTPScreen;
+export default OTPScreenChallenge;
 
 const styles = StyleSheet.create({
   bottomText: {
@@ -48,12 +62,17 @@ const styles = StyleSheet.create({
     fontSize: fontPixel(18),
     fontFamily: FONT_FAMILY.montserratRegular,
     letterSpacing: fontPixel(-0.434),
-    marginTop: pixelSizeVertical(60),
-    marginBottom: pixelSizeVertical(16),
+  },
+  inputsText: {
+    color: COLOR.white,
+    fontSize: fontPixel(26),
+    fontFamily: FONT_FAMILY.montserratBold,
+    letterSpacing: fontPixel(-0.627),
   },
   inputsContainer: {
-    marginBottom: pixelSizeVertical(35),
+    marginBottom: pixelSizeVertical(75),
     gap: pixelSizeVertical(16),
+    marginTop: pixelSizeVertical(64),
   },
   infoText: {
     color: COLOR.white,
@@ -69,7 +88,7 @@ const styles = StyleSheet.create({
     fontSize: fontPixel(24),
     fontFamily: FONT_FAMILY.montserratMedium,
     letterSpacing: fontPixel(-0.579),
-    marginBottom: pixelSizeVertical(60),
+    marginBottom: pixelSizeVertical(25),
   },
   containerCenter: {
     justifyContent: 'center',

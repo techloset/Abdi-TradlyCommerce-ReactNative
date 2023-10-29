@@ -5,6 +5,7 @@ import OnBoardingScreen from '../screens/OnBoardingScreen';
 import LoginScreen from '../screens/auth/LoginScreen';
 import SignUpScreen from '../screens/auth/SignUpScreen';
 import OTPScreen from '../screens/auth/OTPScreen';
+import OTPScreenChallenge from '../screens/auth/OTPScreenChallenge';
 
 const Stack = createStackNavigator();
 const StackNavigator = () => {
@@ -16,6 +17,7 @@ const StackNavigator = () => {
       <Stack.Screen name="Login" component={LoginScreen} />
       <Stack.Screen name="SignUp" component={SignUpScreen} />
       <Stack.Screen name="OTP" component={OTPScreen} />
+      <Stack.Screen name="OTPCha" component={OTPScreenChallenge} />
       <Stack.Screen name="Home" component={HomeScreen} />
     </Stack.Navigator>
   );
