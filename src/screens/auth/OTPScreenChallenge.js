@@ -47,7 +47,7 @@ const OTPScreenChallenge = ({navigation}) => {
         </Text>
         <WhiteBtn
           text={'Verify'}
-          handleFunc={() => navigation.navigate('Home')}
+          handleFunc={() => navigation.navigate('BottomNavigator')}
         />
       </View>
     </SafeAreaView>

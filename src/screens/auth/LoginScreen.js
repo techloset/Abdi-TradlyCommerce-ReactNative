@@ -22,7 +22,10 @@ const LoginScreen = ({navigation}) => {
         <Input placeholder={'Email/Mobile Number'} />
         <Input placeholder={'Password'} />
       </View>
-      <WhiteBtn text={'Login'} handleFunc={() => navigation.navigate('Home')} />
+      <WhiteBtn
+        text={'Login'}
+        handleFunc={() => navigation.navigate('BottomNavigator')}
+      />
       <Text style={styles.bottomText}>Forgot your password?</Text>
       <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
         <Text style={styles.bottomText}>
