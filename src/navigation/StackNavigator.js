@@ -9,6 +9,8 @@ import OTPScreenChallenge from '../screens/auth/OTPScreenChallenge';
 import BottomNavigator from './BottomNavigator';
 import ProductsScreen from '../screens/ProductsScreen';
 import ProductDetailScreen from '../screens/ProductDetailScreen';
+import WishlistScreen from '../screens/WishlistScreen';
+import CheckoutScreen from '../screens/CheckoutScreen';
 
 const Stack = createStackNavigator();
 const StackNavigator = () => {
@@ -23,6 +25,8 @@ const StackNavigator = () => {
       <Stack.Screen name="OTPCha" component={OTPScreenChallenge} />
       <Stack.Screen name="Products" component={ProductsScreen} />
       <Stack.Screen name="ProductDetail" component={ProductDetailScreen} />
+      <Stack.Screen name="Wishlist" component={WishlistScreen} />
+      <Stack.Screen name="Checkout" component={CheckoutScreen} />
       <Stack.Screen name="BottomNavigator" component={BottomNavigator} />
       {/* <Stack.Screen name="Home" component={HomeScreen} /> */}
     </Stack.Navigator>

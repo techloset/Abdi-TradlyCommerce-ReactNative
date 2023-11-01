@@ -124,8 +124,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: COLOR.white,
     position: 'absolute',
-    bottom: pixelSizeVertical(430),
+    bottom: pixelSizeVertical(425),
     elevation: 30,
+    marginTop: pixelSizeVertical(100),
   },
   deliveryText: {
     fontFamily: FONT_FAMILY.montserratMedium,
