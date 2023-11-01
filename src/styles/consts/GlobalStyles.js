@@ -43,6 +43,14 @@ export const TEXT = {
     fontSize: fontPixel(18),
     color: COLOR.white,
   },
+  title: {
+    fontFamily: FONT_FAMILY.montserratSemiBold,
+    fontSize: fontPixel(18),
+    color: COLOR.black,
+    lineHeight: fontPixel(20),
+    letterSpacing: fontPixel(-0.165),
+    paddingVertical: pixelSizeVertical(15),
+  },
   cardText: {
     fontFamily: FONT_FAMILY.montserratMedium,
     fontSize: fontPixel(14),

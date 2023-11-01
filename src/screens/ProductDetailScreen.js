@@ -5,23 +5,20 @@ import {
   SafeAreaView,
   ScrollView,
   ImageBackground,
-  Image,
-  Animated,
   StatusBar,
-  FlatList,
 } from 'react-native';
 import ratio from '../styles/consts/ratio';
-import {COLOR, COMMON, FONT_FAMILY, TEXT} from '../styles/consts/GlobalStyles';
+import {COLOR, FONT_FAMILY, TEXT} from '../styles/consts/GlobalStyles';
 import DetailsScreenHeader from '../(components)/DetailsScreenHeader';
 // icons
 import IndicatorsIcon from '../assets/images/icons/indicators.svg';
 import SeeAllBtn from '../(components)/SeeAllBtn';
+import GreenBtn from '../(components)/GreenBtn';
 
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const ProductDetailScreen = ({navigation, route}) => {
   const {item} = route.params;
-  console.log('first', item);
   return (
     <SafeAreaView>
       <StatusBar translucent={false} backgroundColor={COLOR.green} />
@@ -56,6 +53,63 @@ const ProductDetailScreen = ({navigation, route}) => {
         </View>
         <SeeAllBtn text={'Follow'} />
       </View>
+      {/* description */}
+      <ScrollView contentContainerStyle={styles.scroll}>
+        <View style={styles.descriptionContainer}>
+          <Text style={styles.descriptionText}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lobortis
+            cras placerat diam ipsum ut. Nisi vel adipiscing massa bibendum
+            diam. Suspendisse mattis dui maecenas duis mattis. Mattis aliquam at
+            arcu, semper nunc, venenatis et pellentesque eu. Id tristique
+            maecenas tristique habitasse eu elementum sed. Aliquam eget lacus,
+            arcu, adipiscing eget feugiat in dolor sagittis.
+          </Text>
+          <Text
+            style={[
+              styles.descriptionText,
+              {marginTop: pixelSizeVertical(15)},
+            ]}>
+            Non commodo, a justo massa porttitor sed placerat in. Orci tristique
+            etiam tempus sed. Mi varius morbi egestas dictum tempor nisl. In
+          </Text>
+        </View>
+        <View style={styles.detailsContainer}>
+          <Text style={TEXT.title}>Details</Text>
+          <View style={styles.options}>
+            <View style={styles.optionLeft}>
+              <Text style={styles.descriptionText}>Condition</Text>
+              <Text style={styles.descriptionText}>Price Type</Text>
+              <Text style={styles.descriptionText}>Category</Text>
+              <Text style={styles.descriptionText}>Location</Text>
+            </View>
+            <View style={styles.optionRight}>
+              <Text style={styles.descriptionText}>Organic</Text>
+              <Text style={styles.descriptionText}>Fixed</Text>
+              <Text style={styles.descriptionText}>Baverages</Text>
+              <Text style={styles.descriptionText}>Kualalumpur, Malaysia</Text>
+            </View>
+          </View>
+        </View>
+        <View style={styles.addDetailsContainer}>
+          <Text style={TEXT.title}>Additional Details</Text>
+          <View style={styles.options}>
+            <View style={styles.optionLeft}>
+              <Text style={styles.descriptionText}>Delivery Details</Text>
+            </View>
+            <View style={styles.optionRight}>
+              <Text style={styles.deliveryText}>
+                Home Delivery Available, Cash On Delivery
+              </Text>
+            </View>
+          </View>
+        </View>
+      </ScrollView>
+      <View style={styles.bottom}>
+        <GreenBtn
+          text={'Add To Cart'}
+          handleFunc={() => navigation.navigate('Home')}
+        />
+      </View>
     </SafeAreaView>
   );
 };
@@ -63,6 +117,74 @@ const ProductDetailScreen = ({navigation, route}) => {
 export default ProductDetailScreen;
 
 const styles = StyleSheet.create({
+  bottom: {
+    height: widthPixel(80),
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: COLOR.white,
+    position: 'absolute',
+    bottom: pixelSizeVertical(430),
+    elevation: 30,
+  },
+  deliveryText: {
+    fontFamily: FONT_FAMILY.montserratMedium,
+    fontSize: fontPixel(14),
+    color: COLOR.neutral,
+    width: widthPixel(319),
+    lineHeight: fontPixel(20),
+    width: widthPixel(183),
+  },
+  optionRight: {
+    gap: pixelSizeVertical(15),
+  },
+  optionLeft: {
+    width: widthPixel(93),
+    gap: pixelSizeVertical(15),
+  },
+  options: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    gap: pixelSizeVertical(32),
+  },
+  addDetailsContainer: {
+    backgroundColor: COLOR.white,
+    width: '100%',
+    height: widthPixel(118),
+    borderRadius: pixelSizeVertical(8),
+    paddingHorizontal: pixelSizeVertical(30),
+  },
+  detailsContainer: {
+    backgroundColor: COLOR.white,
+    width: '100%',
+    height: widthPixel(195),
+    borderRadius: pixelSizeVertical(8),
+    paddingHorizontal: pixelSizeVertical(30),
+  },
+  descriptionText: {
+    fontFamily: FONT_FAMILY.montserratRegular,
+    fontSize: fontPixel(14),
+    color: COLOR.neutral,
+    width: widthPixel(319),
+    lineHeight: fontPixel(20),
+    letterSpacing: fontPixel(-0.165),
+    opacity: 0.7,
+  },
+  descriptionContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: COLOR.white,
+    width: '100%',
+    height: widthPixel(353),
+    borderRadius: pixelSizeVertical(8),
+  },
+  scroll: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingBottom: pixelSizeVertical(518),
+    gap: pixelSizeVertical(6),
+  },
   logoText: {
     fontFamily: FONT_FAMILY.montserratSemiBold,
     fontSize: fontPixel(20),
@@ -132,5 +254,6 @@ const styles = StyleSheet.create({
     height: widthPixel(226),
     justifyContent: 'space-between',
     paddingBottom: pixelSizeVertical(15),
+    position: 'relative',
   },
 });
