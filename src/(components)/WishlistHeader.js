@@ -5,10 +5,13 @@ import {COLOR, TEXT} from '../styles/consts/GlobalStyles';
 import FiltersRow from './FiltersRow';
 // icon
 import BackIcon from '../assets/images/icons/backIcon.svg';
+import {useNavigation} from '@react-navigation/native';
 
 const {pixelSizeVertical} = ratio;
 
-const WishlistHeader = ({title, navigation}) => {
+const WishlistHeader = ({title}) => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.headerContainer}>
       <View style={styles.headerTextContainer}>

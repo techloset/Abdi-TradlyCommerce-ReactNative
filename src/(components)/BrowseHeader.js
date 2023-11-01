@@ -7,9 +7,12 @@ import FiltersRow from './FiltersRow';
 import HeartIcon from '../assets/images/icons/heart.svg';
 import CartIcon from '../assets/images/icons/cart.svg';
 import SearchInput from './SearchInput';
+import {useNavigation} from '@react-navigation/native';
+
 const {pixelSizeVertical} = ratio;
 
 const BrowseHeader = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.headerContainer}>
       <View style={styles.headerTextContainer}>
@@ -17,11 +20,15 @@ const BrowseHeader = () => {
           <Text style={TEXT.heading}>Browse</Text>
         </View>
         <View style={styles.headerIconContainer}>
-          <HeartIcon />
-          <View style={styles.cartIcon}>
+          <TouchableOpacity onPress={() => navigation.navigate('Wishlist')}>
+            <HeartIcon />
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('Cart')}
+            style={styles.cartIcon}>
             <CartIcon />
             <View style={styles.ellipse} />
-          </View>
+          </TouchableOpacity>
         </View>
       </View>
       <SearchInput />

@@ -13,7 +13,6 @@ import {
 import React from 'react';
 import ratio from '../styles/consts/ratio';
 import {COLOR, FONT_FAMILY} from '../styles/consts/GlobalStyles';
-import Slides from '../library/Slides';
 
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 const OnBoardingItem = ({item}) => {

@@ -14,26 +14,20 @@ import GreenBtn from '../(components)/GreenBtn';
 import React, {useState} from 'react';
 // icons
 import ChevDownIcon from '../assets/images/icons/chevDown.svg';
-import SeeAllBtn from '../(components)/SeeAllBtn';
 
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
-const CheckoutScreen = ({navigation}) => {
+const CartScreen = ({navigation}) => {
   return (
     <SafeAreaView style={{flex: 1}}>
       <StatusBar translucent backgroundColor={'rgba(0,0,0,0)'} />
-      <WishlistHeader title={'Checkout'} />
-      <View style={styles.container_1}>
-        <View style={styles.addressContainer}>
-          <View style={styles.address}>
-            <Text style={TEXT.cardText}>Deliver to Tradly Team, 75119</Text>
-            <Text style={[TEXT.cardText, {opacity: 0.7}]}>
-              Kualalumpur, Malaysia
-            </Text>
-          </View>
-          <SeeAllBtn text={'Change'} />
-        </View>
-      </View>
+      <WishlistHeader title={'My Cart'} />
+
+      <TouchableOpacity
+        style={styles.container_1}
+        onPress={() => navigation.navigate('AddAddress')}>
+        <Text style={TEXT.cardText}>+ Add New Address</Text>
+      </TouchableOpacity>
       <View style={styles.container_2}>
         <View style={styles.itemContainer}>
           <Image
@@ -82,17 +76,14 @@ const CheckoutScreen = ({navigation}) => {
           <Text style={TEXT.title}>$ 25</Text>
         </View>
       </View>
-      <View style={COMMON.bottom_Bar}>
-        <GreenBtn
-          text={'Coninue to Payment'}
-          handleFunc={() => navigation.navigate('Payment')}
-        />
+      <View style={[COMMON.bottom_Bar, {opacity: 0.4}]}>
+        <GreenBtn text={'Coninue to Payment'} />
       </View>
     </SafeAreaView>
   );
 };
 
-export default CheckoutScreen;
+export default CartScreen;
 
 const styles = StyleSheet.create({
   container_3_Bottom: {

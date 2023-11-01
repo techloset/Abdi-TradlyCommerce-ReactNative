@@ -1,7 +1,9 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import React from 'react';
 import ratio from '../styles/consts/ratio';
 import {COLOR, TEXT} from '../styles/consts/GlobalStyles';
+import {useNavigation} from '@react-navigation/native';
+
 // icons
 import HeartIcon from '../assets/images/icons/heart.svg';
 import CartIcon from '../assets/images/icons/cart.svg';
@@ -10,6 +12,8 @@ import SearchInput from './SearchInput';
 const {pixelSizeVertical} = ratio;
 
 const HomeHeader = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.headerContainer}>
       <View style={styles.headerTextContainer}>
@@ -17,11 +21,15 @@ const HomeHeader = () => {
           <Text style={TEXT.heading}>Groceries</Text>
         </View>
         <View style={styles.headerIconContainer}>
-          <HeartIcon />
-          <View style={styles.cartIcon}>
+          <TouchableOpacity onPress={() => navigation.navigate('Wishlist')}>
+            <HeartIcon />
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('Cart')}
+            style={styles.cartIcon}>
             <CartIcon />
             <View style={styles.ellipse} />
-          </View>
+          </TouchableOpacity>
         </View>
       </View>
       <SearchInput />

@@ -14,11 +14,14 @@ export const FONT_FAMILY = {
 export const COLOR = {
   white: '#FFF',
   black: '#000',
+  bg: '#F3F7FD',
   green: '#33907C',
+  blue: '#4EA0FF',
   neutral: '#4F4F4F',
   neutral_03: '#B9B9B9',
   border_clr: 'rgba(0,0,0,0.1)',
   icon_bg_clr: 'rgba(200,200,200,0.4)',
+  input_clr: '#DBDBDE',
 };
 /* Text */
 export const TEXT = {
@@ -65,5 +68,15 @@ export const COMMON = {
     alignItems: 'center',
     marginBottom: pixelSizeVertical(16),
     paddingHorizontal: pixelSizeVertical(20),
+  },
+  bottom_Bar: {
+    height: widthPixel(80),
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: COLOR.white,
+    position: 'absolute',
+    bottom: pixelSizeVertical(0),
+    elevation: 30,
   },
 };

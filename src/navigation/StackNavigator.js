@@ -10,7 +10,11 @@ import BottomNavigator from './BottomNavigator';
 import ProductsScreen from '../screens/ProductsScreen';
 import ProductDetailScreen from '../screens/ProductDetailScreen';
 import WishlistScreen from '../screens/WishlistScreen';
+import CartScreen from '../screens/CartScreen';
+import AddAddressScreen from '../screens/AddAddressScreen';
 import CheckoutScreen from '../screens/CheckoutScreen';
+import PaymentOptionScreen from '../screens/PaymentOptionScreen';
+import AddCardScreen from '../screens/AddCardScreen';
 
 const Stack = createStackNavigator();
 const StackNavigator = () => {
@@ -26,9 +30,12 @@ const StackNavigator = () => {
       <Stack.Screen name="Products" component={ProductsScreen} />
       <Stack.Screen name="ProductDetail" component={ProductDetailScreen} />
       <Stack.Screen name="Wishlist" component={WishlistScreen} />
+      <Stack.Screen name="Cart" component={CartScreen} />
+      <Stack.Screen name="AddAddress" component={AddAddressScreen} />
       <Stack.Screen name="Checkout" component={CheckoutScreen} />
+      <Stack.Screen name="Payment" component={PaymentOptionScreen} />
+      <Stack.Screen name="AddCard" component={AddCardScreen} />
       <Stack.Screen name="BottomNavigator" component={BottomNavigator} />
-      {/* <Stack.Screen name="Home" component={HomeScreen} /> */}
     </Stack.Navigator>
   );
 };
