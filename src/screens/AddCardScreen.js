@@ -16,7 +16,7 @@ import GreenBtn from '../(components)/GreenBtn';
 import React, {useState} from 'react';
 import AddressInput from '../(components)/AddressInput';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
-const AddCardScreen = () => {
+const AddCardScreen = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar translucent backgroundColor={'rgba(0,0,0,0)'} />
@@ -29,12 +29,12 @@ const AddCardScreen = () => {
       </View>
       <View style={styles.container_2}>
         <View>
-          <Text style={styles.inputLabel}>Name</Text>
-          <AddressInput placeholder={'Tradly Team'} />
+          <Text style={styles.inputLabel}>Card Number</Text>
+          <AddressInput placeholder={'5627 2158 9854 8869'} />
         </View>
         <View>
-          <Text style={styles.inputLabel}>Phone</Text>
-          <AddressInput placeholder={'+621234567890'} />
+          <Text style={styles.inputLabel}>Name</Text>
+          <AddressInput placeholder={'Tradly'} />
         </View>
         <View style={styles.inputsRow}>
           <View>
@@ -69,7 +69,7 @@ const AddCardScreen = () => {
       <View style={COMMON.bottom_Bar}>
         <GreenBtn
           text={'Add Credit Card'}
-          handleFunc={() => navigation.navigate('Checkout')}
+          handleFunc={() => navigation.navigate('PaymentFinal')}
         />
       </View>
     </SafeAreaView>
