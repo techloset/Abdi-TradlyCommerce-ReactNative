@@ -60,9 +60,19 @@ export const TEXT = {
     fontSize: fontPixel(14),
     color: COLOR.neutral,
   },
+  alphaLogoText: {
+    fontFamily: FONT_FAMILY.montserratBold,
+    fontSize: fontPixel(40),
+    color: COLOR.white,
+    textTransform: 'uppercase',
+  },
 };
 /* Common */
 export const COMMON = {
+  super_Container: {
+    flex: 1,
+    backgroundColor: COLOR.bg,
+  },
   row_Just: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -79,5 +89,17 @@ export const COMMON = {
     position: 'absolute',
     bottom: pixelSizeVertical(0),
     elevation: 30,
+  },
+  alphaLogo: {
+    width: widthPixel(60),
+    height: widthPixel(60),
+    backgroundColor: COLOR.green,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: widthPixel(64),
+    borderWidth: widthPixel(1.5),
+    borderColor: COLOR.white,
+    alignSelf: 'center',
+    marginTop: pixelSizeVertical(-30),
   },
 };

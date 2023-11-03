@@ -17,12 +17,14 @@ import PaymentOptionScreen from '../screens/PaymentOptionScreen';
 import AddCardScreen from '../screens/AddCardScreen';
 import PaymentOptionFinalScreen from '../screens/PaymentOptionFinalScreen';
 import CheckoutSuccessScreen from '../screens/CheckoutSuccessScreen';
+import CreateStoreScreen from '../screens/CreateStoreScreen';
+import MyStoreScreen from '../screens/MyStoreScreen';
 
 const Stack = createStackNavigator();
 const StackNavigator = () => {
   return (
     <Stack.Navigator
-      initialRouteName="Onboarding"
+      initialRouteName="BottomNavigator"
       screenOptions={{headerShown: false}}>
       <Stack.Screen name="Onboarding" component={OnBoardingScreen} />
       <Stack.Screen name="Login" component={LoginScreen} />
@@ -39,6 +41,8 @@ const StackNavigator = () => {
       <Stack.Screen name="AddCard" component={AddCardScreen} />
       <Stack.Screen name="PaymentFinal" component={PaymentOptionFinalScreen} />
       <Stack.Screen name="CheckoutSuccess" component={CheckoutSuccessScreen} />
+      <Stack.Screen name="CreateStore" component={CreateStoreScreen} />
+      <Stack.Screen name="MyStore" component={MyStoreScreen} />
       <Stack.Screen name="BottomNavigator" component={BottomNavigator} />
     </Stack.Navigator>
   );

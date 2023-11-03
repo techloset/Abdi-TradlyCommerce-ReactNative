@@ -20,7 +20,7 @@ import AddressInput from '../(components)/AddressInput';
 const AddAddressScreen = ({navigation}) => {
   const address = true;
   return (
-    <SafeAreaView style={{flex: 1}}>
+    <SafeAreaView style={COMMON.super_Container}>
       <StatusBar translucent backgroundColor={'rgba(0,0,0,0)'} />
       <WishlistHeader title={'Add a new Address'} />
       <View style={styles.container_1}>

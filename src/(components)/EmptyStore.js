@@ -13,22 +13,19 @@ import {COLOR, COMMON, FONT_FAMILY, TEXT} from '../styles/consts/GlobalStyles';
 import React from 'react';
 // icons
 import StoreMainIcon from '../assets/images/icons/storeMain.svg';
-import StoreHeader from '../(components)/StoreHeader';
-import StoreBtn from '../(components)/StoreBtn';
+import StoreHeader from './StoreHeader';
+import StoreBtn from './StoreBtn';
 
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
-const StoreScreen = ({navigation}) => {
+const EmptyStore = ({navigation}) => {
   return (
     <SafeAreaView style={COMMON.super_Container}>
-      <StoreHeader title={'My Store'} />
       <View style={styles.container}>
-        <StoreMainIcon width={pixelSizeVertical(152)} />
-        <Text style={[TEXT.title, styles.text]}>You Dont Have a Store</Text>
+        <Text style={[TEXT.title, styles.text]}>You Dont Have a Product</Text>
         <StoreBtn
-          text={'Create Store'}
-          btnColor={COLOR.green}
-          color={COLOR.white}
+          text={'Add Product'}
+          color={COLOR.green}
           handleFunc={() => navigation.navigate('CreateStore')}
         />
       </View>
@@ -36,16 +33,15 @@ const StoreScreen = ({navigation}) => {
   );
 };
 
-export default StoreScreen;
+export default EmptyStore;
 
 const styles = StyleSheet.create({
   text: {
-    marginTop: pixelSizeVertical(28.11),
     marginBottom: pixelSizeVertical(37),
   },
   container: {
     justifyContent: 'center',
     alignItems: 'center',
-    paddingTop: pixelSizeVertical(57),
+    paddingTop: pixelSizeVertical(59),
   },
 });

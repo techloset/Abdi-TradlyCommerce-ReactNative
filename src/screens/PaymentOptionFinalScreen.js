@@ -35,7 +35,7 @@ const PaymentOptionFinalScreen = ({navigation}) => {
     setCurrentIndex(index);
   };
   return (
-    <SafeAreaView style={{flex: 1}}>
+    <SafeAreaView style={COMMON.super_Container}>
       <StatusBar translucent backgroundColor={'rgba(0,0,0,0)'} />
       <WishlistHeader title={'Payment Option'} />
       <View style={styles.container_1}>
