@@ -96,6 +96,15 @@ const AddProductScreen = ({navigation}) => {
             <PickIcon />
           </View>
         </View>
+        <View>
+          <Text style={styles.inputLabel}>Location Details</Text>
+          <TextInput
+            style={styles.textarea}
+            placeholderTextColor={'#4F4F4F'}
+            multiline={true}
+            placeholder={'Lorem ipsum dolor sit amet.'}
+          />
+        </View>
       </ScrollView>
       {/* bottom */}
       <View style={COMMON.bottom_Bar}>
@@ -111,10 +120,22 @@ const AddProductScreen = ({navigation}) => {
 export default AddProductScreen;
 
 const styles = StyleSheet.create({
+  textarea: {
+    width: '80%',
+    fontSize: fontPixel(16),
+    fontFamily: FONT_FAMILY.montserratRegular,
+    lineHeight: fontPixel(24),
+    width: widthPixel(335),
+    borderBottomWidth: 1,
+    borderColor: COLOR.input_clr,
+    alignSelf: 'center',
+    color: COLOR.black,
+  },
   inputWith_icon: {
     width: '80%',
     fontSize: fontPixel(16),
     fontFamily: FONT_FAMILY.montserratRegular,
+    color: COLOR.black,
     lineHeight: fontPixel(24),
   },
   inputWith_icon_Container: {
@@ -123,6 +144,8 @@ const styles = StyleSheet.create({
     borderColor: COLOR.input_clr,
     alignSelf: 'center',
     flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
   input: {
     borderBottomWidth: 1,
@@ -130,6 +153,7 @@ const styles = StyleSheet.create({
     fontSize: fontPixel(16),
     fontFamily: FONT_FAMILY.montserratMedium,
     lineHeight: fontPixel(24),
+    color: COLOR.black,
     alignSelf: 'center',
   },
   inputsRow: {

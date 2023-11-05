@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
     fontSize: fontPixel(16),
     fontFamily: FONT_FAMILY.montserratMedium,
     lineHeight: fontPixel(24),
+    color: COLOR.black,
     alignSelf: 'center',
   },
 });
