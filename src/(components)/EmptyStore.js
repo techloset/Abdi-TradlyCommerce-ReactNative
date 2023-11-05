@@ -12,13 +12,13 @@ import ratio from '../styles/consts/ratio';
 import {COLOR, COMMON, FONT_FAMILY, TEXT} from '../styles/consts/GlobalStyles';
 import React from 'react';
 // icons
-import StoreMainIcon from '../assets/images/icons/storeMain.svg';
-import StoreHeader from './StoreHeader';
 import StoreBtn from './StoreBtn';
+import {useNavigation} from '@react-navigation/native';
 
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
-const EmptyStore = ({navigation}) => {
+const EmptyStore = () => {
+  const navigation = useNavigation();
   return (
     <SafeAreaView style={COMMON.super_Container}>
       <View style={styles.container}>

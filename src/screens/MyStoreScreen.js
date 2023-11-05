@@ -10,19 +10,24 @@ import {
 } from 'react-native';
 import ratio from '../styles/consts/ratio';
 import {COLOR, COMMON, FONT_FAMILY, TEXT} from '../styles/consts/GlobalStyles';
-import React from 'react';
+import React, {useState} from 'react';
 // icons
-import StoreMainIcon from '../assets/images/icons/storeMain.svg';
 import StoreHeader from '../(components)/StoreHeader';
-import StoreBtn from '../(components)/StoreBtn';
-import SeeAllBtnWhite from '../(components)/SeeAllBtnWhite';
-import SeeAllBtn from '../(components)/SeeAllBtn';
 import SmallBtn from '../(components)/SmallBtn';
+import FilledStore from '../(components)/FilledStore';
 import EmptyStore from '../(components)/EmptyStore';
 
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
-const MyStoreScreen = ({navigation}) => {
+const MyStoreScreen = ({route}) => {
+  const {data} = route.params;
+
+  let CurrentView = EmptyStore;
+
+  if (data == true) {
+    CurrentView = FilledStore;
+  }
+
   return (
     <SafeAreaView style={COMMON.super_Container}>
       <StoreHeader title={'My Store'} />
@@ -47,7 +52,7 @@ const MyStoreScreen = ({navigation}) => {
           <Text style={styles.faded}>Remove Store</Text>
         </TouchableOpacity>
       </View>
-      <EmptyStore />
+      <CurrentView />
     </SafeAreaView>
   );
 };
