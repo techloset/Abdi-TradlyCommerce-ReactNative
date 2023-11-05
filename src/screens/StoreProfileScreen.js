@@ -20,9 +20,7 @@ const StoreProfileScreen = ({navigation}) => {
   return (
     <SafeAreaView style={COMMON.super_Container}>
       <StoreProfileHeader title={'Tradly Store'} />
-      <View style={styles.container}>
-        <View style={styles.imageContainer}></View>
-      </View>
+      <View style={styles.container}></View>
     </SafeAreaView>
   );
 };
