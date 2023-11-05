@@ -14,8 +14,6 @@ import React, {useState} from 'react';
 // icons
 import StoreHeader from '../(components)/StoreHeader';
 import SmallBtn from '../(components)/SmallBtn';
-import FilledStore from '../(components)/FilledStore';
-import EmptyStore from '../(components)/EmptyStore';
 
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
@@ -73,7 +71,21 @@ const OrderHistoryScreen = () => {
                     </View>
                   </View>
                 </View>
-                <View style={styles.right}></View>
+                <View style={styles.right}>
+                  {i == 0 ? (
+                    <SmallBtn
+                      text={item.text}
+                      btnColor={COLOR.green}
+                      color={COLOR.white}
+                    />
+                  ) : (
+                    <SmallBtn
+                      text={item.text}
+                      btnColor={COLOR.white}
+                      color={COLOR.green}
+                    />
+                  )}
+                </View>
               </View>
             );
           })}
@@ -136,6 +148,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     paddingStart: pixelSizeVertical(16),
     paddingEnd: pixelSizeVertical(10),
+    justifyContent: 'space-between',
   },
   container_1: {
     marginTop: pixelSizeVertical(18),

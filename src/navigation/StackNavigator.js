@@ -19,6 +19,7 @@ import CheckoutSuccessScreen from '../screens/CheckoutSuccessScreen';
 import CreateStoreScreen from '../screens/CreateStoreScreen';
 import MyStoreScreen from '../screens/MyStoreScreen';
 import AddProductScreen from '../screens/AddProductScreen';
+import StoreProfileScreen from '../screens/StoreProfileScreen';
 
 const Stack = createStackNavigator();
 const StackNavigator = () => {
@@ -44,6 +45,7 @@ const StackNavigator = () => {
       <Stack.Screen name="CreateStore" component={CreateStoreScreen} />
       <Stack.Screen name="MyStore" component={MyStoreScreen} />
       <Stack.Screen name="AddProduct" component={AddProductScreen} />
+      <Stack.Screen name="StoreProfile" component={StoreProfileScreen} />
       <Stack.Screen name="BottomNavigator" component={BottomNavigator} />
     </Stack.Navigator>
   );
