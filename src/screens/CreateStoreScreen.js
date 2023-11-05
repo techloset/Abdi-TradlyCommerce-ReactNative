@@ -15,9 +15,9 @@ import React from 'react';
 import StoreMainIcon from '../assets/images/icons/storeMain.svg';
 import WishlistHeader from '../(components)/WishlistHeader';
 import GreenBtn from '../(components)/GreenBtn';
-import AddressInput from '../(components)/AddressInput';
 import OptionWithCross from '../(components)/OptionWithCross';
 import EmptyStore from '../(components)/EmptyStore';
+import ProductInput from '../(components)/ProductInput';
 
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
@@ -80,7 +80,7 @@ const CreateStoreScreen = ({navigation}) => {
           return (
             <View key={index}>
               <Text style={styles.inputLabel}>{item.inputLabel}</Text>
-              <AddressInput placeholder={item.placeholderText} />
+              <ProductInput placeholder={item.placeholderText} />
             </View>
           );
         })}

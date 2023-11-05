@@ -16,6 +16,7 @@ export const COLOR = {
   black: '#000',
   bg: '#F3F7FD',
   green: '#33907C',
+  green_1: '#E3EFF2',
   grey: '#606A7B',
   blue: '#4EA0FF',
   neutral: '#4F4F4F',

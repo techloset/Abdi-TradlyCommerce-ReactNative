@@ -27,16 +27,15 @@ const StoreProductCard = ({data}) => {
     <>
       {MapData.map((item, index) => {
         return (
-          <TouchableOpacity
-            key={index}
-            style={styles.container}
-            onPress={() => {
-              navigation.navigate('ProductDetail', {
-                item,
-              });
-            }}>
+          <View key={index} style={styles.container}>
             <ImageBackground style={styles.img} source={item.img}>
-              <TouchableOpacity style={styles.optionIcon}>
+              <TouchableOpacity
+                onPress={() =>
+                  navigation.navigate('AddProduct', {
+                    data: 'Edit Product',
+                  })
+                }
+                style={styles.optionIcon}>
                 <EditIcon />
               </TouchableOpacity>
               <TouchableOpacity style={styles.optionIcon}>
@@ -56,7 +55,7 @@ const StoreProductCard = ({data}) => {
                 </View>
               </View>
             </View>
-          </TouchableOpacity>
+          </View>
         );
       })}
     </>

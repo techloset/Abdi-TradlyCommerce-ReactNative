@@ -36,7 +36,11 @@ const FilledStore = () => {
         <ScrollView contentContainerStyle={styles.container_1}>
           <StoreProductCard data={cardData} />
           <TouchableOpacity
-            onPress={() => navigation.navigate('AddProduct')}
+            onPress={() =>
+              navigation.navigate('AddProduct', {
+                data: 'Add Product',
+              })
+            }
             style={styles.addProductContainer}>
             <AddIcon />
             <Text

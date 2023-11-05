@@ -14,19 +14,21 @@ import {COLOR, COMMON, FONT_FAMILY, TEXT} from '../styles/consts/GlobalStyles';
 import WishlistHeader from '../(components)/WishlistHeader';
 import GreenBtn from '../(components)/GreenBtn';
 import React, {useState} from 'react';
-import AddressInput from '../(components)/AddressInput';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
+import ProductInput from '../(components)/ProductInput';
 
 // icon
 import AddIcon from '../assets/images/icons/addIconSmall.svg';
 import CrossIcon from '../assets/images/icons/crossCircle.svg';
 import PickIcon from '../assets/images/icons/pick.svg';
+import OptionWithCross from '../(components)/OptionWithCross';
 
-const AddProductScreen = ({navigation}) => {
+const AddProductScreen = ({navigation, route}) => {
+  const {data} = route.params;
   return (
     <SafeAreaView style={COMMON.super_Container}>
       <StatusBar translucent backgroundColor={'rgba(0,0,0,0)'} />
-      <WishlistHeader title={'Add Product'} />
+      <WishlistHeader title={data} />
       <View style={styles.container_1}>
         <View style={styles.image}>
           <TouchableOpacity style={styles.addPhotoContainer}>
@@ -51,11 +53,11 @@ const AddProductScreen = ({navigation}) => {
       <ScrollView contentContainerStyle={styles.container_2}>
         <View>
           <Text style={styles.inputLabel}>Product Name</Text>
-          <AddressInput placeholder={'Brocolli'} />
+          <ProductInput placeholder={'Brocolli'} />
         </View>
         <View>
           <Text style={styles.inputLabel}>Category Product</Text>
-          <AddressInput placeholder={'Vegetables'} />
+          <ProductInput placeholder={'Vegetables'} />
         </View>
         <View style={styles.inputsRow}>
           <View>
@@ -105,12 +107,31 @@ const AddProductScreen = ({navigation}) => {
             placeholder={'Lorem ipsum dolor sit amet.'}
           />
         </View>
+        <View>
+          <Text style={styles.inputLabel}>Condition</Text>
+          <ProductInput placeholder={'Organic'} />
+        </View>
+        <View>
+          <Text style={styles.inputLabel}>Price Type</Text>
+          <ProductInput placeholder={'Fixed'} />
+        </View>
+        <View>
+          <Text style={styles.inputLabel}>Additional Details</Text>
+          <View style={styles.optionInput}>
+            <OptionWithCross text={'Cash on delivery'} />
+            <OptionWithCross text={'Available'} />
+          </View>
+        </View>
       </ScrollView>
       {/* bottom */}
       <View style={COMMON.bottom_Bar}>
         <GreenBtn
-          text={'Add Credit Card'}
-          handleFunc={() => navigation.navigate('PaymentFinal')}
+          text={data}
+          handleFunc={() =>
+            navigation.navigate('MyStore', {
+              data: true,
+            })
+          }
         />
       </View>
     </SafeAreaView>
@@ -120,6 +141,15 @@ const AddProductScreen = ({navigation}) => {
 export default AddProductScreen;
 
 const styles = StyleSheet.create({
+  optionInput: {
+    width: widthPixel(335),
+    borderBottomWidth: 1,
+    borderColor: COLOR.input_clr,
+    alignSelf: 'center',
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: pixelSizeVertical(3),
+  },
   textarea: {
     width: '80%',
     fontSize: fontPixel(16),

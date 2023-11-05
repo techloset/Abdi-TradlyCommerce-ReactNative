@@ -26,7 +26,11 @@ const EmptyStore = () => {
         <StoreBtn
           text={'Add Product'}
           color={COLOR.green}
-          handleFunc={() => navigation.navigate('AddProduct')}
+          handleFunc={() =>
+            navigation.navigate('AddProduct', {
+              data: 'Add Product',
+            })
+          }
         />
       </View>
     </SafeAreaView>
