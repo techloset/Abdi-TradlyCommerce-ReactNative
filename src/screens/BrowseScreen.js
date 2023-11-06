@@ -1,22 +1,10 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  SafeAreaView,
-  ScrollView,
-  ImageBackground,
-  Image,
-  TouchableOpacity,
-  StatusBar,
-  FlatList,
-} from 'react-native';
+import {StyleSheet, SafeAreaView, ScrollView, StatusBar} from 'react-native';
 import ratio from '../styles/consts/ratio';
-import {COLOR, COMMON, FONT_FAMILY, TEXT} from '../styles/consts/GlobalStyles';
 import BrowseHeader from '../(components)/BrowseHeader';
 import ProductCard from '../(components)/ProductCard';
 import Browse from '../library/Browse';
 
-const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
+const {pixelSizeVertical} = ratio;
 
 const BrowseScreen = () => {
   return (

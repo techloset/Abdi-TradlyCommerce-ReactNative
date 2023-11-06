@@ -1,22 +1,10 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  SafeAreaView,
-  ScrollView,
-  ImageBackground,
-  Image,
-  TouchableOpacity,
-  StatusBar,
-  FlatList,
-} from 'react-native';
+import {StyleSheet, SafeAreaView, ScrollView, StatusBar} from 'react-native';
 import ratio from '../styles/consts/ratio';
-import {COLOR, COMMON, FONT_FAMILY, TEXT} from '../styles/consts/GlobalStyles';
 import WishlistHeader from '../(components)/WishlistHeader';
 import Browse from '../library/Browse';
 import ProductCard from '../(components)/ProductCard';
 
-const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
+const {pixelSizeVertical} = ratio;
 
 const WishlistScreen = () => {
   const Data = Browse.slice(0, 4);

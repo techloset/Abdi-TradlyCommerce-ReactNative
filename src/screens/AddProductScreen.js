@@ -13,7 +13,7 @@ import ratio from '../styles/consts/ratio';
 import {COLOR, COMMON, FONT_FAMILY, TEXT} from '../styles/consts/GlobalStyles';
 import WishlistHeader from '../(components)/WishlistHeader';
 import GreenBtn from '../(components)/GreenBtn';
-import React, {useState} from 'react';
+import React from 'react';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 import ProductInput from '../(components)/ProductInput';
 

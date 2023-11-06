@@ -1,21 +1,12 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  SafeAreaView,
-  Image,
-  StatusBar,
-  TouchableOpacity,
-  ScrollView,
-} from 'react-native';
+import {StyleSheet, Text, View, SafeAreaView} from 'react-native';
 import ratio from '../styles/consts/ratio';
-import {COLOR, COMMON, FONT_FAMILY, TEXT} from '../styles/consts/GlobalStyles';
+import {COLOR, COMMON, TEXT} from '../styles/consts/GlobalStyles';
 import React from 'react';
 // icons
 import StoreBtn from './StoreBtn';
 import {useNavigation} from '@react-navigation/native';
 
-const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
+const {pixelSizeVertical} = ratio;
 
 const EmptyStore = () => {
   const navigation = useNavigation();

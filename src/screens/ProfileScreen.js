@@ -3,14 +3,11 @@ import {
   Text,
   View,
   SafeAreaView,
-  Image,
-  StatusBar,
   TouchableOpacity,
-  ScrollView,
 } from 'react-native';
 import ratio from '../styles/consts/ratio';
 import {COLOR, COMMON, FONT_FAMILY, TEXT} from '../styles/consts/GlobalStyles';
-import React, {useState} from 'react';
+import React from 'react';
 import StoreHeader from '../(components)/StoreHeader';
 // icons
 import OvalIcon from '../assets/images/icons/oval.svg';

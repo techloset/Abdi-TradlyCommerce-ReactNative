@@ -9,7 +9,7 @@ import {
   ScrollView,
 } from 'react-native';
 import ratio from '../styles/consts/ratio';
-import {COLOR, COMMON, FONT_FAMILY, TEXT} from '../styles/consts/GlobalStyles';
+import {COLOR, FONT_FAMILY, TEXT} from '../styles/consts/GlobalStyles';
 import WishlistHeader from '../(components)/WishlistHeader';
 import React from 'react';
 // icons

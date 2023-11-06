@@ -1,21 +1,10 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  SafeAreaView,
-  ScrollView,
-  ImageBackground,
-  Image,
-  Animated,
-  StatusBar,
-  FlatList,
-} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import ratio from '../styles/consts/ratio';
 import {COLOR, TEXT} from '../styles/consts/GlobalStyles';
 // icon
 import SearchIcon from '../assets/images/icons/browse.svg';
 
-const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
+const {widthPixel, pixelSizeVertical} = ratio;
 const SearchInput = () => {
   return (
     <View style={styles.searchContainer}>

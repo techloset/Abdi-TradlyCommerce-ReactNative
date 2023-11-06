@@ -1,25 +1,12 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  SafeAreaView,
-  ScrollView,
-  ImageBackground,
-  Image,
-  Animated,
-  StatusBar,
-  FlatList,
-} from 'react-native';
+import {StyleSheet, SafeAreaView, ScrollView, StatusBar} from 'react-native';
 import ratio from '../styles/consts/ratio';
-import {COLOR, COMMON, FONT_FAMILY, TEXT} from '../styles/consts/GlobalStyles';
 import ProductCard from '../(components)/ProductCard';
 import ProductsHeader from '../(components)/ProductsHeader';
 
-const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
+const {pixelSizeVertical} = ratio;
 
 const ProductsScreen = ({route, navigation}) => {
   const {item} = route.params;
-  //   console.log('item', item.data);
   return (
     <SafeAreaView>
       <StatusBar translucent backgroundColor={'rgba(0,0,0,0)'} />

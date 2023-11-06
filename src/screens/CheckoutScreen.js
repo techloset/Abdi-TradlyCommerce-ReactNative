@@ -5,13 +5,12 @@ import {
   SafeAreaView,
   Image,
   StatusBar,
-  TouchableOpacity,
 } from 'react-native';
 import ratio from '../styles/consts/ratio';
 import {COLOR, COMMON, FONT_FAMILY, TEXT} from '../styles/consts/GlobalStyles';
 import WishlistHeader from '../(components)/WishlistHeader';
 import GreenBtn from '../(components)/GreenBtn';
-import React, {useState} from 'react';
+import React from 'react';
 // icons
 import ChevDownIcon from '../assets/images/icons/chevDown.svg';
 import SeeAllBtn from '../(components)/SeeAllBtn';
@@ -182,7 +181,6 @@ const styles = StyleSheet.create({
     marginBottom: pixelSizeVertical(62),
   },
   addressContainer: {
-    // justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row',
     gap: pixelSizeVertical(49),

@@ -1,15 +1,4 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  SafeAreaView,
-  ScrollView,
-  ImageBackground,
-  Image,
-  TouchableOpacity,
-  StatusBar,
-  FlatList,
-} from 'react-native';
+import {StyleSheet, Text, View, Image} from 'react-native';
 import React from 'react';
 import ratio from '../styles/consts/ratio';
 import {COLOR, FONT_FAMILY} from '../styles/consts/GlobalStyles';

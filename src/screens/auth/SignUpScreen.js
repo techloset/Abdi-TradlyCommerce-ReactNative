@@ -12,7 +12,7 @@ import Input from '../../(components)/Input';
 import WhiteBtn from '../../(components)/WhiteBtn';
 import BackIcon from '../../assets/images/icons/backIcon.svg';
 
-const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
+const {fontPixel, pixelSizeVertical} = ratio;
 
 const SignUpScreen = ({navigation}) => {
   return (

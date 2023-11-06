@@ -2,7 +2,6 @@ import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import React from 'react';
 import ratio from '../styles/consts/ratio';
 import {COLOR, TEXT} from '../styles/consts/GlobalStyles';
-import FiltersRow from './FiltersRow';
 // icon
 import BackIcon from '../assets/images/icons/backIcon.svg';
 import {useNavigation} from '@react-navigation/native';

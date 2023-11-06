@@ -12,7 +12,7 @@ import WhiteBtn from '../../(components)/WhiteBtn';
 import BackIcon from '../../assets/images/icons/backIcon.svg';
 import NumberInput from '../../(components)/NumberInput';
 
-const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
+const {fontPixel, pixelSizeVertical} = ratio;
 
 const OTPScreen = ({navigation}) => {
   return (

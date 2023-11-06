@@ -3,8 +3,6 @@ import {
   Text,
   View,
   SafeAreaView,
-  Image,
-  StatusBar,
   TouchableOpacity,
   ScrollView,
 } from 'react-native';
@@ -17,7 +15,7 @@ import StoreProductCard from './StoreProductCard';
 import AddIcon from '../assets/images/icons/addIcon.svg';
 import {useNavigation} from '@react-navigation/native';
 
-const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
+const {widthPixel, pixelSizeVertical} = ratio;
 
 const FilledStore = () => {
   const navigation = useNavigation();

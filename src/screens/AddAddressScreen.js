@@ -1,12 +1,4 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  SafeAreaView,
-  Image,
-  StatusBar,
-  TouchableOpacity,
-} from 'react-native';
+import {StyleSheet, Text, View, SafeAreaView, StatusBar} from 'react-native';
 import ratio from '../styles/consts/ratio';
 import {COLOR, COMMON, FONT_FAMILY, TEXT} from '../styles/consts/GlobalStyles';
 import WishlistHeader from '../(components)/WishlistHeader';

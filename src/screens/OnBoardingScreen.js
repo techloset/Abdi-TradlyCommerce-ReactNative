@@ -16,7 +16,6 @@ import GreenBtn from '../(components)/GreenBtn';
 
 const {pixelSizeVertical} = ratio;
 
-// ...
 const OnBoardingScreen = ({navigation}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const scrollX = useRef(new Animated.Value(0)).current;
@@ -70,7 +69,6 @@ const OnBoardingScreen = ({navigation}) => {
     </SafeAreaView>
   );
 };
-// ...
 
 export default OnBoardingScreen;
 

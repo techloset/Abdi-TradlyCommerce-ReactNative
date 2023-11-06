@@ -1,13 +1,4 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  SafeAreaView,
-  Image,
-  StatusBar,
-  TouchableOpacity,
-  ScrollView,
-} from 'react-native';
+import {StyleSheet, Text, View, SafeAreaView, ScrollView} from 'react-native';
 import ratio from '../styles/consts/ratio';
 import {COLOR, COMMON, FONT_FAMILY, TEXT} from '../styles/consts/GlobalStyles';
 import React from 'react';
@@ -16,7 +7,6 @@ import StoreMainIcon from '../assets/images/icons/storeMain.svg';
 import WishlistHeader from '../(components)/WishlistHeader';
 import GreenBtn from '../(components)/GreenBtn';
 import OptionWithCross from '../(components)/OptionWithCross';
-import EmptyStore from '../(components)/EmptyStore';
 import ProductInput from '../(components)/ProductInput';
 
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;

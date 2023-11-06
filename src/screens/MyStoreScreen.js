@@ -3,14 +3,11 @@ import {
   Text,
   View,
   SafeAreaView,
-  Image,
-  StatusBar,
   TouchableOpacity,
-  ScrollView,
 } from 'react-native';
 import ratio from '../styles/consts/ratio';
 import {COLOR, COMMON, FONT_FAMILY, TEXT} from '../styles/consts/GlobalStyles';
-import React, {useState} from 'react';
+import React from 'react';
 // icons
 import StoreHeader from '../(components)/StoreHeader';
 import SmallBtn from '../(components)/SmallBtn';
@@ -92,7 +89,6 @@ const styles = StyleSheet.create({
     marginBottom: pixelSizeVertical(37),
   },
   container: {
-    // justifyContent: 'center',
     alignItems: 'center',
     paddingTop: pixelSizeVertical(50),
     width: '100%',

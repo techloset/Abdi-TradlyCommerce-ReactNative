@@ -1,22 +1,11 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  SafeAreaView,
-  ScrollView,
-  ImageBackground,
-  Image,
-  TouchableOpacity,
-  StatusBar,
-  FlatList,
-} from 'react-native';
+import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import ratio from '../styles/consts/ratio';
-import {COLOR, COMMON, FONT_FAMILY, TEXT} from '../styles/consts/GlobalStyles';
+import {COLOR, FONT_FAMILY, TEXT} from '../styles/consts/GlobalStyles';
 // icon
 import TLogo from '../assets/images/icons/tLogo.svg';
 
-const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
+const {widthPixel, pixelSizeVertical} = ratio;
 const ProductCard = ({data}) => {
   const navigation = useNavigation();
 

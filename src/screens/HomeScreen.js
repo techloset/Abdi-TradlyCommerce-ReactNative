@@ -17,8 +17,8 @@ import SeeAllBtn from '../(components)/SeeAllBtn';
 import ProductCard from '../(components)/ProductCard';
 import SeeAllBtnWhite from '../(components)/SeeAllBtnWhite';
 import StoreCard from '../(components)/StoreCard';
-import Beverages from '../library/Beverages';
-import Browse from '../library/Browse';
+import Popular from '../library/Popular';
+import New from '../library/New';
 
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
@@ -88,7 +88,7 @@ const HomeScreen = ({navigation}) => {
           <ScrollView
             horizontal
             contentContainerStyle={styles.productCardsContainer}>
-            <ProductCard data={Beverages} />
+            <ProductCard data={New} />
           </ScrollView>
         </View>
         <View style={styles.newProduct}>
@@ -99,7 +99,7 @@ const HomeScreen = ({navigation}) => {
           <ScrollView
             horizontal
             contentContainerStyle={styles.productCardsContainer}>
-            <ProductCard data={Browse} />
+            <ProductCard data={Popular} />
           </ScrollView>
         </View>
         <ImageBackground
@@ -112,8 +112,6 @@ const HomeScreen = ({navigation}) => {
           <ScrollView
             horizontal
             contentContainerStyle={styles.storeCardsContainer}>
-            <StoreCard />
-            <StoreCard />
             <StoreCard />
           </ScrollView>
         </ImageBackground>
@@ -128,12 +126,10 @@ const styles = StyleSheet.create({
   storeCardsContainer: {
     paddingHorizontal: pixelSizeVertical(20),
     gap: pixelSizeVertical(10),
-    // marginTop: pixelSizeVertical(-100),
   },
   storeContainer: {
     paddingTop: pixelSizeVertical(22),
     marginTop: pixelSizeVertical(30),
-    // backgroundColor: COLOR.green,
     height: widthPixel(370),
   },
   productCardsContainer: {
@@ -155,10 +151,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   menu: {
-    // gap: pixelSizeVertical(2),
     flexDirection: 'row',
     justifyContent: 'space-between',
-    // alignItems: 'center',
   },
   menuConatiner: {
     gap: pixelSizeVertical(2),

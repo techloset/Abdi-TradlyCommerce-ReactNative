@@ -1,41 +1,38 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  SafeAreaView,
-  ScrollView,
-  ImageBackground,
-  Image,
-  TouchableOpacity,
-  StatusBar,
-  FlatList,
-} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
 import ratio from '../styles/consts/ratio';
-import {COLOR, COMMON, FONT_FAMILY, TEXT} from '../styles/consts/GlobalStyles';
+import {COLOR, FONT_FAMILY, TEXT} from '../styles/consts/GlobalStyles';
 // icon
-import TLogo from '../assets/images/icons/tLogo.svg';
+import T from '../assets/images/icons/t.svg';
+import A from '../assets/images/icons/a.svg';
 import SeeAllBtn from './SeeAllBtn';
 
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 const StoreCard = () => {
+  const CardData = [
+    {svg: T, img: require('../assets/images/store/1.png')},
+    {svg: A, img: require('../assets/images/store/2.png')},
+    {svg: T, img: require('../assets/images/store/1.png')},
+  ];
+
   return (
-    <TouchableOpacity style={styles.container}>
-      <ImageBackground
-        style={styles.img}
-        source={require('../assets/images/store.png')}>
-        <View style={styles.bottomContainer}>
-          <View style={styles.logo}>
-            <Text style={styles.logoText}>T</Text>
-          </View>
-          <View style={styles.title}>
-            <Text style={TEXT.cardText}>Tradly Store</Text>
-          </View>
-          <View style={styles.btn}>
-            <SeeAllBtn text={'Follow'} />
-          </View>
-        </View>
-      </ImageBackground>
-    </TouchableOpacity>
+    <>
+      {CardData.map((item, index) => {
+        return (
+          <TouchableOpacity key={index} style={styles.container}>
+            <Image style={styles.img} source={item.img} />
+            <View style={styles.logo}>
+              <item.svg />
+            </View>
+            <View style={styles.title}>
+              <Text style={TEXT.cardText}>Tradly Store</Text>
+            </View>
+            <View style={styles.btn}>
+              <SeeAllBtn text={'Follow'} />
+            </View>
+          </TouchableOpacity>
+        );
+      })}
+    </>
   );
 };
 
@@ -59,14 +56,6 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase',
   },
   logo: {
-    width: widthPixel(60),
-    height: widthPixel(60),
-    backgroundColor: COLOR.green,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: widthPixel(64),
-    borderWidth: widthPixel(1.5),
-    borderColor: COLOR.white,
     alignSelf: 'center',
     marginTop: pixelSizeVertical(-30),
   },
@@ -74,11 +63,9 @@ const styles = StyleSheet.create({
     height: '100%',
     backgroundColor: COLOR.white,
     marginTop: pixelSizeVertical(85),
-
-    // width: '100%',
   },
   img: {
-    height: '100%',
+    height: pixelSizeVertical(85),
     width: '100%',
   },
   container: {

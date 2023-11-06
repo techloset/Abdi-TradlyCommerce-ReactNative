@@ -3,7 +3,7 @@ import React from 'react';
 import {COLOR, FONT_FAMILY} from '../styles/consts/GlobalStyles';
 import ratio from '../styles/consts/ratio';
 
-const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
+const {widthPixel, fontPixel} = ratio;
 const AddressInput = ({placeholder}) => {
   return (
     <TextInput

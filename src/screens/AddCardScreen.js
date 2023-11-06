@@ -5,15 +5,13 @@ import {
   SafeAreaView,
   Image,
   StatusBar,
-  TouchableOpacity,
   TextInput,
-  FlatList,
 } from 'react-native';
 import ratio from '../styles/consts/ratio';
-import {COLOR, COMMON, FONT_FAMILY, TEXT} from '../styles/consts/GlobalStyles';
+import {COLOR, COMMON, FONT_FAMILY} from '../styles/consts/GlobalStyles';
 import WishlistHeader from '../(components)/WishlistHeader';
 import GreenBtn from '../(components)/GreenBtn';
-import React, {useState} from 'react';
+import React from 'react';
 import AddressInput from '../(components)/AddressInput';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 const AddCardScreen = ({navigation}) => {

@@ -1,15 +1,6 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  SafeAreaView,
-  Image,
-  StatusBar,
-  TouchableOpacity,
-  ScrollView,
-} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import React, {useState} from 'react';
-import {COLOR, FONT_FAMILY, TEXT} from '../styles/consts/GlobalStyles';
+import {COLOR, FONT_FAMILY} from '../styles/consts/GlobalStyles';
 import ratio from '../styles/consts/ratio';
 
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;

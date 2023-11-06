@@ -30,7 +30,6 @@ const styles = StyleSheet.create({
   btn: {
     paddingHorizontal: pixelSizeVertical(23),
     height: widthPixel(23),
-    // alignSelf: 'center',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: widthPixel(26),
