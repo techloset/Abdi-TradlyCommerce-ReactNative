@@ -9,7 +9,6 @@ const App = () => {
     SplashScreen.hide();
   }, []);
   return (
-    // <></>
     <NavigationContainer>
       <StackNavigator />
     </NavigationContainer>
