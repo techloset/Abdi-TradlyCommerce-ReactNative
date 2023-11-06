@@ -11,6 +11,7 @@ import React from 'react';
 import StoreHeader from '../(components)/StoreHeader';
 // icons
 import OvalIcon from '../assets/images/icons/oval.svg';
+import SCREENS from '../library/SCREENS';
 
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
@@ -18,7 +19,7 @@ const ProfileScreen = ({navigation}) => {
   const optionsData = [
     {
       text: 'Edit Profile',
-      nav: () => navigation.navigate('StoreProfile'),
+      nav: () => navigation.navigate(SCREENS.STORE_PROFILE),
     },
     {
       text: 'Language & Currency',

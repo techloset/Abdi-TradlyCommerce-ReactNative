@@ -22,6 +22,7 @@ import AddIcon from '../assets/images/icons/addIconSmall.svg';
 import CrossIcon from '../assets/images/icons/crossCircle.svg';
 import PickIcon from '../assets/images/icons/pick.svg';
 import OptionWithCross from '../(components)/OptionWithCross';
+import SCREENS from '../library/SCREENS';
 
 const AddProductScreen = ({navigation, route}) => {
   const {data} = route.params;
@@ -128,7 +129,7 @@ const AddProductScreen = ({navigation, route}) => {
         <GreenBtn
           text={data}
           handleFunc={() =>
-            navigation.navigate('MyStore', {
+            navigation.navigate(SCREENS.MY_STORE, {
               data: true,
             })
           }

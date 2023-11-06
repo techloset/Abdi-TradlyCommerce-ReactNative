@@ -13,6 +13,7 @@ import Slides from '../library/Slides';
 import OnBoardingItem from '../(components)/OnBoardingItem';
 import Paginator from '../(components)/Paginator';
 import GreenBtn from '../(components)/GreenBtn';
+import SCREENS from '../library/SCREENS';
 
 const {pixelSizeVertical} = ratio;
 
@@ -26,7 +27,7 @@ const OnBoardingScreen = ({navigation}) => {
       slidesRef.current.scrollToIndex({index: currentIndex + 1});
       setCurrentIndex(currentIndex + 1);
     } else {
-      navigation.navigate('Login');
+      navigation.navigate(SCREENS.LOGIN);
     }
   };
 

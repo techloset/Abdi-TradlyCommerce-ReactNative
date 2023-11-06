@@ -14,6 +14,7 @@ import React from 'react';
 // icons
 import ChevDownIcon from '../assets/images/icons/chevDown.svg';
 import SeeAllBtn from '../(components)/SeeAllBtn';
+import SCREENS from '../library/SCREENS';
 
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
@@ -84,7 +85,7 @@ const CheckoutScreen = ({navigation}) => {
       <View style={COMMON.bottom_Bar}>
         <GreenBtn
           text={'Coninue to Payment'}
-          handleFunc={() => navigation.navigate('Payment')}
+          handleFunc={() => navigation.navigate(SCREENS.PAYMENT)}
         />
       </View>
     </SafeAreaView>

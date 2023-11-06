@@ -19,6 +19,7 @@ const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 import CardRadio from '../(components)/CardRadio';
 import SeeAllBtn from '../(components)/SeeAllBtn';
 import Paginator_Sec from '../(components)/Paginator_Sec';
+import SCREENS from '../library/SCREENS';
 
 const PaymentOptionScreen = ({navigation}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -44,7 +45,7 @@ const PaymentOptionScreen = ({navigation}) => {
           renderItem={({item, i}) => (
             <TouchableOpacity
               key={i}
-              onPress={() => navigation.navigate('AddCard')}
+              onPress={() => navigation.navigate(SCREENS.ADD_CARD)}
               style={styles.cardImgContainer}>
               <Image style={styles.cardImg} source={item.img} />
             </TouchableOpacity>

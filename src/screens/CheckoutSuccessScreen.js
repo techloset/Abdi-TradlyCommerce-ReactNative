@@ -17,6 +17,7 @@ import ChevDownIcon from '../assets/images/icons/chevDown.svg';
 import DoneIcon from '../assets/images/icons/done.svg';
 import HLineIcon from '../assets/images/icons/h_Line.svg';
 import SortLineIcon from '../assets/images/icons/sortLine.svg';
+import SCREENS from '../library/SCREENS';
 
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
@@ -130,7 +131,7 @@ const CheckoutSuccessScreen = ({navigation}) => {
           </View>
         </View>
         <TouchableOpacity
-          onPress={() => navigation.navigate('BottomNavigator')}
+          onPress={() => navigation.navigate(SCREENS.BOTTOM_NAVIGATOR)}
           style={styles.bottomBtn}>
           <Text style={styles.bottomBtn_Text}>Back to Home</Text>
         </TouchableOpacity>

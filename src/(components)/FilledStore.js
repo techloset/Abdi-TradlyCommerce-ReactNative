@@ -14,6 +14,7 @@ import StoreProductCard from './StoreProductCard';
 // icons
 import AddIcon from '../assets/images/icons/addIcon.svg';
 import {useNavigation} from '@react-navigation/native';
+import SCREENS from '../library/SCREENS';
 
 const {widthPixel, pixelSizeVertical} = ratio;
 
@@ -35,7 +36,7 @@ const FilledStore = () => {
           <StoreProductCard data={cardData} />
           <TouchableOpacity
             onPress={() =>
-              navigation.navigate('AddProduct', {
+              navigation.navigate(SCREENS.ADD_PRODUCT, {
                 data: 'Add Product',
               })
             }

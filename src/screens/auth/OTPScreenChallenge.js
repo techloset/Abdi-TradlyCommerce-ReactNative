@@ -11,6 +11,7 @@ import ratio from '../../styles/consts/ratio';
 import WhiteBtn from '../../(components)/WhiteBtn';
 import BackIcon from '../../assets/images/icons/backIcon.svg';
 import OTPTextView from 'react-native-otp-textinput';
+import SCREENS from '../../library/SCREENS';
 
 const {fontPixel, pixelSizeVertical} = ratio;
 
@@ -47,7 +48,7 @@ const OTPScreenChallenge = ({navigation}) => {
         </Text>
         <WhiteBtn
           text={'Verify'}
-          handleFunc={() => navigation.navigate('BottomNavigator')}
+          handleFunc={() => navigation.navigate(SCREENS.BOTTOM_NAVIGATOR)}
         />
       </View>
     </SafeAreaView>

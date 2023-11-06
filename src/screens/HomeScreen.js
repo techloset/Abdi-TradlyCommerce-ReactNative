@@ -19,6 +19,7 @@ import SeeAllBtnWhite from '../(components)/SeeAllBtnWhite';
 import StoreCard from '../(components)/StoreCard';
 import Popular from '../library/Popular';
 import New from '../library/New';
+import SCREENS from '../library/SCREENS';
 
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
@@ -50,7 +51,7 @@ const HomeScreen = ({navigation}) => {
               return (
                 <TouchableOpacity
                   onPress={() =>
-                    navigation.navigate('Products', {
+                    navigation.navigate(SCREENS.PRODUCTS, {
                       item: item,
                     })
                   }
@@ -67,7 +68,7 @@ const HomeScreen = ({navigation}) => {
               return (
                 <TouchableOpacity
                   onPress={() =>
-                    navigation.navigate('Products', {
+                    navigation.navigate(SCREENS.PRODUCTS, {
                       item: item,
                     })
                   }

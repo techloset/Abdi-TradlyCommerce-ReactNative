@@ -4,6 +4,7 @@ import ratio from '../styles/consts/ratio';
 import {COLOR, FONT_FAMILY, TEXT} from '../styles/consts/GlobalStyles';
 // icon
 import TLogo from '../assets/images/icons/tLogo.svg';
+import SCREENS from '../library/SCREENS';
 
 const {widthPixel, pixelSizeVertical} = ratio;
 const ProductCard = ({data}) => {
@@ -18,7 +19,7 @@ const ProductCard = ({data}) => {
             key={index}
             style={styles.container}
             onPress={() => {
-              navigation.navigate('ProductDetail', {
+              navigation.navigate(SCREENS.PRODUCT_DETAIL, {
                 item,
               });
             }}>

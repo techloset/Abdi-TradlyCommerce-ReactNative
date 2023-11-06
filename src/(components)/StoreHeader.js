@@ -8,6 +8,7 @@ import {useNavigation} from '@react-navigation/native';
 import HeartIcon from '../assets/images/icons/heart.svg';
 import CartIcon from '../assets/images/icons/cart.svg';
 import SearchInput from './SearchInput';
+import SCREENS from '../library/SCREENS';
 
 const {pixelSizeVertical} = ratio;
 
@@ -21,10 +22,11 @@ const StoreHeader = ({title}) => {
           <Text style={TEXT.heading}>{title}</Text>
         </View>
         <View style={styles.headerIconContainer}>
-          <TouchableOpacity onPress={() => navigation.navigate('Wishlist')}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate(SCREENS.WISHLIST)}>
             <HeartIcon />
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigation.navigate('Cart')}>
+          <TouchableOpacity onPress={() => navigation.navigate(SCREENS.CART)}>
             <CartIcon />
           </TouchableOpacity>
         </View>

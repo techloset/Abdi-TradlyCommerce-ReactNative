@@ -11,6 +11,7 @@ import ratio from '../../styles/consts/ratio';
 import WhiteBtn from '../../(components)/WhiteBtn';
 import BackIcon from '../../assets/images/icons/backIcon.svg';
 import NumberInput from '../../(components)/NumberInput';
+import SCREENS from '../../library/SCREENS';
 
 const {fontPixel, pixelSizeVertical} = ratio;
 
@@ -33,7 +34,7 @@ const OTPScreen = ({navigation}) => {
         <Text style={styles.bottomText}>Or login with Social network</Text>
         <WhiteBtn
           text={'Next'}
-          handleFunc={() => navigation.navigate('OTPCha')}
+          handleFunc={() => navigation.navigate(SCREENS.OTP_CHA)}
         />
       </View>
     </SafeAreaView>

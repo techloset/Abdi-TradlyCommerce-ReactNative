@@ -5,29 +5,67 @@ import {
   SafeAreaView,
   ScrollView,
   ImageBackground,
+  Image,
+  FlatList,
   StatusBar,
 } from 'react-native';
 import ratio from '../styles/consts/ratio';
+import React, {useState} from 'react';
 import {COLOR, FONT_FAMILY, TEXT} from '../styles/consts/GlobalStyles';
 import DetailsScreenHeader from '../(components)/DetailsScreenHeader';
 // icons
 import IndicatorsIcon from '../assets/images/icons/indicators.svg';
 import SeeAllBtn from '../(components)/SeeAllBtn';
 import GreenBtn from '../(components)/GreenBtn';
+import SCREENS from '../library/SCREENS';
+import Paginator_Sec from '../(components)/Paginator_Sec';
 
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const ProductDetailScreen = ({navigation, route}) => {
   const {item} = route.params;
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const imgData = [
+    {img: item.img},
+    {img: item.img},
+    {img: item.img},
+    {img: item.img},
+  ];
+
+  const handleMomentumScrollEnd = event => {
+    const contentOffset = event.nativeEvent.contentOffset.x;
+    const index = Math.round(contentOffset / ratio.SCREEN_WIDTH);
+    setCurrentIndex(index);
+  };
   return (
     <SafeAreaView>
       <StatusBar translucent={false} backgroundColor={COLOR.green} />
-      <ImageBackground style={styles.backgroundImg} source={item.img}>
+      <View style={styles.container_1}>
+        <FlatList
+          data={imgData}
+          renderItem={({item, i}) => (
+            <Image style={styles.backgroundImg} source={item.img} />
+          )}
+          horizontal
+          pagingEnabled
+          showsHorizontalScrollIndicator={false}
+          onMomentumScrollEnd={handleMomentumScrollEnd}
+        />
+        <View style={styles.header}>
+          <DetailsScreenHeader />
+        </View>
+        <View style={styles.indicator}>
+          <Paginator_Sec data={imgData} currentIndex={currentIndex} />
+        </View>
+      </View>
+      {/* <ImageBackground style={styles.backgroundImg} source={item.img}>
         <DetailsScreenHeader />
         <View style={styles.indicator}>
           <IndicatorsIcon />
         </View>
-      </ImageBackground>
+      </ImageBackground> */}
       <View style={styles.titleContainer}>
         <Text style={styles.title}>{item.title}</Text>
         <View style={styles.priceContainer}>
@@ -107,7 +145,7 @@ const ProductDetailScreen = ({navigation, route}) => {
       <View style={styles.bottom}>
         <GreenBtn
           text={'Add To Cart'}
-          handleFunc={() => navigation.navigate('Home')}
+          handleFunc={() => navigation.navigate(SCREENS.BOTTOM_NAVIGATOR)}
         />
       </View>
     </SafeAreaView>
@@ -250,11 +288,19 @@ const styles = StyleSheet.create({
   },
   indicator: {
     alignItems: 'center',
+    position: 'absolute',
+    bottom: pixelSizeVertical(15),
+    alignSelf: 'center',
+  },
+  header: {
+    position: 'absolute',
+    top: pixelSizeVertical(0),
+    right: pixelSizeVertical(0),
+    left: pixelSizeVertical(0),
   },
   backgroundImg: {
     height: widthPixel(226),
-    justifyContent: 'space-between',
-    paddingBottom: pixelSizeVertical(15),
+    width: widthPixel(375),
     position: 'relative',
   },
 });

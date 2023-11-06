@@ -8,6 +8,7 @@ const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 // icons
 import LocationIcon from '../assets/images/icons/currentLocation.svg';
 import AddressInput from '../(components)/AddressInput';
+import SCREENS from '../library/SCREENS';
 
 const AddAddressScreen = ({navigation}) => {
   const address = true;
@@ -51,7 +52,7 @@ const AddAddressScreen = ({navigation}) => {
       <View style={COMMON.bottom_Bar}>
         <GreenBtn
           text={'Save'}
-          handleFunc={() => navigation.navigate('Checkout')}
+          handleFunc={() => navigation.navigate(SCREENS.CHECKOUT)}
         />
       </View>
     </SafeAreaView>

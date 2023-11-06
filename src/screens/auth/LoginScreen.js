@@ -10,6 +10,7 @@ import {COLOR, FONT_FAMILY} from '../../styles/consts/GlobalStyles';
 import ratio from '../../styles/consts/ratio';
 import Input from '../../(components)/Input';
 import WhiteBtn from '../../(components)/WhiteBtn';
+import SCREENS from '../../library/SCREENS';
 
 const {fontPixel, pixelSizeVertical} = ratio;
 
@@ -24,10 +25,10 @@ const LoginScreen = ({navigation}) => {
       </View>
       <WhiteBtn
         text={'Login'}
-        handleFunc={() => navigation.navigate('BottomNavigator')}
+        handleFunc={() => navigation.navigate(SCREENS.BOTTOM_NAVIGATOR)}
       />
       <Text style={styles.bottomText}>Forgot your password?</Text>
-      <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
+      <TouchableOpacity onPress={() => navigation.navigate(SCREENS.SIGN_UP)}>
         <Text style={styles.bottomText}>
           Don’t have an account?{' '}
           <Text style={{fontFamily: FONT_FAMILY.montserratSemiBold}}>

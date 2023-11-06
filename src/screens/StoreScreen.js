@@ -6,6 +6,7 @@ import React from 'react';
 import StoreMainIcon from '../assets/images/icons/storeMain.svg';
 import StoreHeader from '../(components)/StoreHeader';
 import StoreBtn from '../(components)/StoreBtn';
+import SCREENS from '../library/SCREENS';
 
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
@@ -20,7 +21,7 @@ const StoreScreen = ({navigation}) => {
           text={'Create Store'}
           btnColor={COLOR.green}
           color={COLOR.white}
-          handleFunc={() => navigation.navigate('CreateStore')}
+          handleFunc={() => navigation.navigate(SCREENS.CREATE_STORE)}
         />
       </View>
     </SafeAreaView>

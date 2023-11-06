@@ -14,6 +14,7 @@ import GreenBtn from '../(components)/GreenBtn';
 import React from 'react';
 // icons
 import ChevDownIcon from '../assets/images/icons/chevDown.svg';
+import SCREENS from '../library/SCREENS';
 
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
@@ -25,7 +26,7 @@ const CartScreen = ({navigation}) => {
 
       <TouchableOpacity
         style={styles.container_1}
-        onPress={() => navigation.navigate('AddAddress')}>
+        onPress={() => navigation.navigate(SCREENS.ADD_ADDRESS)}>
         <Text style={TEXT.cardText}>+ Add New Address</Text>
       </TouchableOpacity>
       <View style={styles.container_2}>

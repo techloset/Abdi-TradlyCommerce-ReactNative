@@ -5,6 +5,7 @@ import React from 'react';
 // icons
 import StoreBtn from './StoreBtn';
 import {useNavigation} from '@react-navigation/native';
+import SCREENS from '../library/SCREENS';
 
 const {pixelSizeVertical} = ratio;
 
@@ -18,7 +19,7 @@ const EmptyStore = () => {
           text={'Add Product'}
           color={COLOR.green}
           handleFunc={() =>
-            navigation.navigate('AddProduct', {
+            navigation.navigate(SCREENS.ADD_PRODUCT, {
               data: 'Add Product',
             })
           }

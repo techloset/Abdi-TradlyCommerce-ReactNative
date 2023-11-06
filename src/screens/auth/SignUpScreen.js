@@ -11,6 +11,7 @@ import ratio from '../../styles/consts/ratio';
 import Input from '../../(components)/Input';
 import WhiteBtn from '../../(components)/WhiteBtn';
 import BackIcon from '../../assets/images/icons/backIcon.svg';
+import SCREENS from '../../library/SCREENS';
 
 const {fontPixel, pixelSizeVertical} = ratio;
 
@@ -34,9 +35,9 @@ const SignUpScreen = ({navigation}) => {
         </View>
         <WhiteBtn
           text={'Create'}
-          handleFunc={() => navigation.navigate('OTP')}
+          handleFunc={() => navigation.navigate(SCREENS.OTP)}
         />
-        <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+        <TouchableOpacity onPress={() => navigation.navigate(SCREENS.LOGIN)}>
           <Text style={styles.bottomText}>
             Have an account?{' '}
             <Text style={{fontFamily: FONT_FAMILY.montserratSemiBold}}>

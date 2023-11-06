@@ -12,6 +12,7 @@ import {COLOR, FONT_FAMILY, TEXT} from '../styles/consts/GlobalStyles';
 import TLogo from '../assets/images/icons/tLogo.svg';
 import EditIcon from '../assets/images/icons/Edit.svg';
 import DeleteIcon from '../assets/images/icons/Delete.svg';
+import SCREENS from '../library/SCREENS';
 
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 const StoreProductCard = ({data}) => {
@@ -26,7 +27,7 @@ const StoreProductCard = ({data}) => {
             <ImageBackground style={styles.img} source={item.img}>
               <TouchableOpacity
                 onPress={() =>
-                  navigation.navigate('AddProduct', {
+                  navigation.navigate(SCREENS.ADD_PRODUCT, {
                     data: 'Edit Product',
                   })
                 }

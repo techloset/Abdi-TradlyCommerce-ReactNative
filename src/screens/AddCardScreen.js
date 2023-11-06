@@ -13,6 +13,7 @@ import WishlistHeader from '../(components)/WishlistHeader';
 import GreenBtn from '../(components)/GreenBtn';
 import React from 'react';
 import AddressInput from '../(components)/AddressInput';
+import SCREENS from '../library/SCREENS';
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 const AddCardScreen = ({navigation}) => {
   return (
@@ -67,7 +68,7 @@ const AddCardScreen = ({navigation}) => {
       <View style={COMMON.bottom_Bar}>
         <GreenBtn
           text={'Add Credit Card'}
-          handleFunc={() => navigation.navigate('PaymentFinal')}
+          handleFunc={() => navigation.navigate(SCREENS.PAYMENT_FINAL)}
         />
       </View>
     </SafeAreaView>

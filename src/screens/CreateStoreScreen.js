@@ -8,6 +8,7 @@ import WishlistHeader from '../(components)/WishlistHeader';
 import GreenBtn from '../(components)/GreenBtn';
 import OptionWithCross from '../(components)/OptionWithCross';
 import ProductInput from '../(components)/ProductInput';
+import SCREENS from '../library/SCREENS';
 
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
@@ -86,7 +87,9 @@ const CreateStoreScreen = ({navigation}) => {
       <View style={COMMON.bottom_Bar}>
         <GreenBtn
           text={'Create'}
-          handleFunc={() => navigation.navigate('MyStore', {data: false})}
+          handleFunc={() =>
+            navigation.navigate(SCREENS.MY_STORE, {data: false})
+          }
         />
       </View>
     </SafeAreaView>
