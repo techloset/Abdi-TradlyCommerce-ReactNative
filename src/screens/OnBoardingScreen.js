@@ -14,7 +14,6 @@ import OnBoardingItem from '../(components)/OnBoardingItem';
 import Paginator from '../(components)/Paginator';
 import GreenBtn from '../(components)/GreenBtn';
 import SCREENS from '../library/SCREENS';
-
 const {pixelSizeVertical} = ratio;
 
 const OnBoardingScreen = ({navigation}) => {
