@@ -29,6 +29,7 @@ const OnBoardingScreen = ({navigation}) => {
       navigation.navigate(SCREENS.LOGIN);
     }
   };
+
   const handleMomentumScrollEnd = event => {
     const contentOffset = event.nativeEvent.contentOffset.x;
     const index = Math.round(contentOffset / ratio.SCREEN_WIDTH);
