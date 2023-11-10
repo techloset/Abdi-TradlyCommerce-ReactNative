@@ -22,10 +22,7 @@ const Paginator = ({data, scrollX}) => {
         });
 
         return (
-          <Animated.View
-            style={[styles.dot, {opacity: dotOpacity}]}
-            key={i.toString()}
-          />
+          <Animated.View style={[styles.dot, {opacity: dotOpacity}]} key={i} />
         );
       })}
     </View>

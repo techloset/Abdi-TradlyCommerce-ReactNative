@@ -19,6 +19,12 @@ const SCREENS = {
   ADD_PRODUCT: 'AddProduct',
   STORE_PROFILE: 'StoreProfile',
   BOTTOM_NAVIGATOR: 'BottomNavigator',
+  // bottom
+  HOME: 'Home',
+  BROWSE: 'Browse',
+  STORE: 'Store',
+  ORDER: 'Order',
+  PROFILE: 'Profile',
 };
 
 export default SCREENS;

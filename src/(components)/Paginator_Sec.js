@@ -14,7 +14,7 @@ const Paginator_Sec = ({data, currentIndex}) => {
             style={
               currentIndex == i ? [styles.dot] : [styles.dot, {opacity: 0.5}]
             }
-            key={i.toString()}
+            key={i}
           />
         );
       })}
