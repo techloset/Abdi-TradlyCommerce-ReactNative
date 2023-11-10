@@ -19,7 +19,7 @@ const SCREENS = {
   ADD_PRODUCT: 'AddProduct',
   STORE_PROFILE: 'StoreProfile',
   BOTTOM_NAVIGATOR: 'BottomNavigator',
-  // bottom
+  // BOTTOM_NAVIGATOR
   HOME: 'Home',
   BROWSE: 'Browse',
   STORE: 'Store',
