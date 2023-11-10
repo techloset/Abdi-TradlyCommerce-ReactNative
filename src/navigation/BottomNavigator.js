@@ -2,7 +2,6 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {COLOR} from '../styles/consts/GlobalStyles';
 import ratio from '../styles/consts/ratio';
 import BOTTOM_NAVIGATION from '../library/BOTTOM_NAVIGATION';
-
 const Tab = createBottomTabNavigator();
 
 const BottomNavigator = () => {
