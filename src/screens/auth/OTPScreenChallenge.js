@@ -11,9 +11,7 @@ import {COLOR, FONT_FAMILY} from '../../styles/consts/GlobalStyles';
 import ratio from '../../styles/consts/ratio';
 import WhiteBtn from '../../(components)/WhiteBtn';
 import BackIcon from '../../assets/images/icons/backIcon.svg';
-// import OTPTextView from 'react-native-otp-textinput';
 import SCREENS from '../../library/SCREENS';
-import OTPInputView from '@twotalltotems/react-native-otp-input';
 
 const {fontPixel, pixelSizeVertical, widthPixel} = ratio;
 
