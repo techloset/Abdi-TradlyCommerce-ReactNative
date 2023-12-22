@@ -4,6 +4,7 @@ import {
   View,
   SafeAreaView,
   TouchableOpacity,
+  TextInput,
 } from 'react-native';
 import React from 'react';
 import {COLOR, FONT_FAMILY} from '../../styles/consts/GlobalStyles';
@@ -12,8 +13,30 @@ import WhiteBtn from '../../(components)/WhiteBtn';
 import BackIcon from '../../assets/images/icons/backIcon.svg';
 // import OTPTextView from 'react-native-otp-textinput';
 import SCREENS from '../../library/SCREENS';
+import OTPInputView from '@twotalltotems/react-native-otp-input';
 
-const {fontPixel, pixelSizeVertical} = ratio;
+const {fontPixel, pixelSizeVertical, widthPixel} = ratio;
+
+otpData = [
+  {
+    placeholder: '6',
+  },
+  {
+    placeholder: '2',
+  },
+  {
+    placeholder: '2',
+  },
+  {
+    placeholder: '2',
+  },
+  {
+    placeholder: '2',
+  },
+  {
+    placeholder: '2',
+  },
+];
 
 const OTPScreenChallenge = ({navigation}) => {
   return (
@@ -27,11 +50,15 @@ const OTPScreenChallenge = ({navigation}) => {
         <Text style={styles.headingText}>Phone Verification</Text>
         <Text style={styles.infoText}>Enter your OTP code here </Text>
         <View style={styles.inputsContainer}>
-          {/* <OTPTextView
-            inputCount={6}
-            offTintColor={COLOR.white}
-            textInputStyle={styles.inputsText}
-          /> */}
+          {Array(6)
+            .fill(true)
+            .map((item, i) => (
+              <TextInput
+                key={i}
+                style={[styles.otp_input, styles.inputsText]}
+                keyboardType="numeric"
+              />
+            ))}
         </View>
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <Text style={styles.bottomText}>Didn’t you received any code? </Text>
@@ -64,16 +91,23 @@ const styles = StyleSheet.create({
     fontFamily: FONT_FAMILY.montserratRegular,
     letterSpacing: fontPixel(-0.434),
   },
+  otp_input: {
+    borderBottomColor: COLOR.white,
+    borderBottomWidth: widthPixel(1),
+    width: pixelSizeVertical(36),
+  },
   inputsText: {
     color: COLOR.white,
     fontSize: fontPixel(26),
     fontFamily: FONT_FAMILY.montserratBold,
     letterSpacing: fontPixel(-0.627),
+    textAlign: 'center',
   },
   inputsContainer: {
     marginBottom: pixelSizeVertical(75),
     gap: pixelSizeVertical(16),
     marginTop: pixelSizeVertical(64),
+    flexDirection: 'row',
   },
   infoText: {
     color: COLOR.white,
