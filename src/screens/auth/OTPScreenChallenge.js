@@ -10,7 +10,7 @@ import {COLOR, FONT_FAMILY} from '../../styles/consts/GlobalStyles';
 import ratio from '../../styles/consts/ratio';
 import WhiteBtn from '../../(components)/WhiteBtn';
 import BackIcon from '../../assets/images/icons/backIcon.svg';
-import OTPTextView from 'react-native-otp-textinput';
+// import OTPTextView from 'react-native-otp-textinput';
 import SCREENS from '../../library/SCREENS';
 
 const {fontPixel, pixelSizeVertical} = ratio;
@@ -27,11 +27,11 @@ const OTPScreenChallenge = ({navigation}) => {
         <Text style={styles.headingText}>Phone Verification</Text>
         <Text style={styles.infoText}>Enter your OTP code here </Text>
         <View style={styles.inputsContainer}>
-          <OTPTextView
+          {/* <OTPTextView
             inputCount={6}
             offTintColor={COLOR.white}
             textInputStyle={styles.inputsText}
-          />
+          /> */}
         </View>
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <Text style={styles.bottomText}>Didn’t you received any code? </Text>

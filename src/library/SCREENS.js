@@ -23,7 +23,7 @@ const SCREENS = {
   HOME: 'Home',
   BROWSE: 'Browse',
   STORE: 'Store',
-  ORDER: 'Order',
+  ORDER: 'Order History',
   PROFILE: 'Profile',
 };
 

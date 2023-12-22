@@ -14,16 +14,16 @@ const Browse = [
     dis: true,
   },
   {
-    title: 'Egg',
+    title: 'Brocolli',
     img: require('../assets/images/browse/4.png'),
   },
   {
-    title: 'Fruit',
+    title: 'Egg',
     img: require('../assets/images/browse/5.png'),
     dis: true,
   },
   {
-    title: 'Bread',
+    title: 'Fruit',
     img: require('../assets/images/browse/6.png'),
   },
 ];

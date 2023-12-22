@@ -68,8 +68,20 @@ const CartScreen = ({navigation}) => {
             <Text style={styles.container_3_Text}>Delivery Fee</Text>
           </View>
           <View style={styles.optionRight}>
-            <Text style={styles.container_3_Text}>Price ( 1 item)</Text>
-            <Text style={styles.container_3_Text}>Delivery Fee</Text>
+            <Text
+              style={[
+                styles.container_3_Text,
+                {
+                  textAlign: 'right',
+                  fontFamily: FONT_FAMILY.montserratMedium,
+                  color: COLOR.black,
+                },
+              ]}>
+              $25
+            </Text>
+            <Text style={[styles.container_3_Text, {textAlign: 'right'}]}>
+              Info
+            </Text>
           </View>
         </View>
         <View style={styles.container_3_Bottom}>

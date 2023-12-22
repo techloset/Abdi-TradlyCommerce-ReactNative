@@ -18,11 +18,11 @@ const FiltersRow = () => {
       </TouchableOpacity>
       <TouchableOpacity style={styles.btn}>
         <Location />
-        <Text style={styles.btnText}>Sort By</Text>
+        <Text style={styles.btnText}>Location</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.btn}>
         <Category />
-        <Text style={styles.btnText}>Sort By</Text>
+        <Text style={styles.btnText}>Category</Text>
       </TouchableOpacity>
     </View>
   );
